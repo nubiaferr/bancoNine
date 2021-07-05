@@ -5,7 +5,6 @@ programa
 	{	inteiro escolhaMenu = 0, escolhaCredDeb = 0, limiteLoop = 10, diaAniversario, respostaDia, cheque =3
 		real saldo1=0.0, saldo2=0.0, saldo3=0.0, saldo4=0.0, saldo5=0.0
 		real credito=0.0, debito=0.0, lis = 1000.00, diferenca = 0.0 
-		real diferencaCred = 0.0, diferencaCred2=0.0
 		real emprestimoEmpresa=10000.00, emprestimoValorEmpresa=0.0
 		real emprestimoEstudante=5000.00, emprestimoValorEstudante=0.0
 		cadeia respCheque, respostaRepeteSN, respEmprestimo
@@ -59,7 +58,6 @@ programa
 						saldo1-=debito
 					}
 					escreva("\n-----------------------")
-					limpa()
 				} senao {
 					escreva("\nOPERAÇÃO INVÁLIDA")
 					escreva("\n-----------------------")
@@ -124,11 +122,11 @@ programa
 						saldo2-=debito
 					}
 					escreva("\n-----------------------")
-					limpa()
 				} senao {
 					escreva("\nOPERAÇÃO INVÁLIDA")
 					escreva("\n-----------------------")
 				}
+				
 						
 		//fluxo cheque	
 		se (saldo2 >= 30.00){
@@ -152,7 +150,7 @@ programa
 				} 
 				
 				} senao {
-					escreva("Tenha um ótimo dia.\n")
+					escreva("\nTenha um ótimo dia.\n")
 				}
 
 				escreva("\nSALDO ATUAL: "+saldo2+"\n")
@@ -208,10 +206,11 @@ programa
 						escreva("ERRO")
 					}
 					escreva("\n-----------------------")
-					limpa()
+					//limpa()
 					
 			
-				escreva("\nSALDO ATUAL: "+saldo3+"\n")
+				escreva("\nSALDO ATUAL: "+saldo3)
+				escreva("\nCRÉDITO ESPECIAL DISPONÍVEL: "+lis+"\n")
 				escreva("\nDeseja repetir a operação? S/N: ")
 				leia(respostaRepeteSN)
 				limpa()
@@ -234,6 +233,8 @@ programa
 				escreva("\n-----------------------")
 				escreva("\n1 - Crédito\n")
 				escreva("\n2 - Débito\n")
+				escreva("\n-----------------------")
+				escreva("\nDigite a opção desejada: ")
 				leia(escolhaCredDeb)
 
 				se (escolhaCredDeb == 1){
@@ -247,12 +248,10 @@ programa
 					leia(debito)
 					se (debito > saldo4){
 						escreva("VALOR INDISPONÍVEL")
-						limpa()
 					} senao{
 						saldo4-=debito
 					}
 					escreva("\n-----------------------")
-					limpa()
 				} senao {
 					escreva("\nOPERAÇÃO INVÁLIDA")
 					escreva("\n-----------------------")
@@ -279,7 +278,7 @@ programa
 					} senao  se (respEmprestimo == "n" ou respEmprestimo == "N"){
 						pare
 					} senao {
-						escreva("ERRO")
+						escreva("Tenha um ótimo dia.")
 						pare
 					}
 					
@@ -312,6 +311,8 @@ programa
 				escreva("\n-----------------------")
 				escreva("\n1 - Crédito\n")
 				escreva("\n2 - Débito\n")
+				escreva("\n-----------------------")
+				escreva("\nDigite a opção desejada: ")
 				leia(escolhaCredDeb)
 
 				se (escolhaCredDeb == 1){
@@ -325,16 +326,13 @@ programa
 					leia(debito)
 					se (debito > saldo5){
 						escreva("VALOR INDISPONÍVEL")
-						limpa()
 					} senao{
 						saldo5-=debito
 					}
 					escreva("\n-----------------------")
-					limpa()
 				} senao {
 					escreva("\nOPERAÇÃO INVÁLIDA")
 					escreva("\n-----------------------")
-					limpa()
 				}
 
 				se (emprestimoEstudante <= 5000 e emprestimoEstudante > 0){
@@ -365,7 +363,7 @@ programa
 				} enquanto (emprestimoEstudante <= 5000)
 				
 				} senao {
-					escreva("ERRO")
+					escreva("Tenha um ótimo dia.")
 				}
 				
 				escreva("\nSALDO ATUAL: "+saldo5)
@@ -394,7 +392,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 7292; 
+ * @POSICAO-CURSOR = 9849; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
