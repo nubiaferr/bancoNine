@@ -46,9 +46,12 @@ programa
 				se (escolhaCredDeb == 1){
 					escreva("\nDigite o valor de crédito: \n")
 					leia(credito)
-					saldo1+=credito
+					se (credito > 0) {
+						saldo1+=credito
+					} senao {
+						escreva("Insira um valor válido")
+					}
 					escreva("\n-----------------------")
-					limpa()
 				} senao se (escolhaCredDeb == 2){
 					escreva("\nDigite o valor de débito: \n")
 					leia(debito)
@@ -110,9 +113,12 @@ programa
 				se (escolhaCredDeb == 1){
 					escreva("\nDigite o valor de crédito: \n")
 					leia(credito)
-					saldo2+=credito
+					se (credito > 0) {
+						saldo2+=credito
+					} senao {
+						escreva("Insira um valor válido")
+					}
 					escreva("\n-----------------------")
-					limpa()
 				} senao se (escolhaCredDeb == 2){
 					escreva("\nDigite o valor de débito: \n")
 					leia(debito)
@@ -184,9 +190,12 @@ programa
 					escreva("\nDigite o valor de crédito: \n")
 					leia(credito)
 				
-					saldo3+=credito
+					se (credito > 0) {
+						saldo3+=credito
+					} senao {
+						escreva("Insira um valor válido")
+					}
 					escreva("\n-----------------------")
-					limpa()
 				} senao se (escolhaCredDeb == 2){
 					escreva("\nDigite o valor de débito: \n")
 					leia(debito)
@@ -240,9 +249,12 @@ programa
 				se (escolhaCredDeb == 1){
 					escreva("\nDigite o valor de crédito: \n")
 					leia(credito)
-					saldo4+=credito
+					se (credito > 0) {
+						saldo4+=credito
+					} senao {
+						escreva("Insira um valor válido")
+					}
 					escreva("\n-----------------------")
-					limpa()
 				} senao se (escolhaCredDeb == 2){
 					escreva("\nDigite o valor de débito: \n")
 					leia(debito)
@@ -318,9 +330,13 @@ programa
 				se (escolhaCredDeb == 1){
 					escreva("\nDigite o valor de crédito: \n")
 					leia(credito)
-					saldo5+=credito
+					se (credito > 0) {
+						saldo5+=credito
+					} senao {
+						escreva("Insira um valor válido")
+					}
+					
 					escreva("\n-----------------------")
-					limpa()
 				} senao se (escolhaCredDeb == 2){
 					escreva("\nDigite o valor de débito: \n")
 					leia(debito)
@@ -392,7 +408,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 9849; 
+ * @POSICAO-CURSOR = 9404; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
