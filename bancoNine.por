@@ -209,15 +209,14 @@ programa
 							lis=lis-diferenca
 							saldo3+=diferenca
 							saldo3-=debito	
-							escreva("\n-------------------")
-							limpa()
+							escreva("\nValor debitado: "+diferenca)
 					}senao {
 						escreva("ERRO")
 					}
 					escreva("\n-----------------------")
-					//limpa()
 					
-			
+				} 
+				
 				escreva("\nSALDO ATUAL: "+saldo3)
 				escreva("\nCRÉDITO ESPECIAL DISPONÍVEL: "+lis+"\n")
 				escreva("\nDeseja repetir a operação? S/N: ")
@@ -226,7 +225,6 @@ programa
 
 				se(respostaRepeteSN == "N" ou respostaRepeteSN == "n"){
 					pare
-				} 
 
 				}
 						
@@ -288,16 +286,17 @@ programa
 						}
 						pare
 					} senao  se (respEmprestimo == "n" ou respEmprestimo == "N"){
+						escreva("\nTenha um ótimo dia.")
 						pare
 					} senao {
-						escreva("Tenha um ótimo dia.")
+						escreva("ERRO")
 						pare
 					}
 					
 				} enquanto (emprestimoEmpresa <= 10000)
 				
 				} senao {
-					escreva("ERRO")
+					escreva("\nTenha um ótimo dia.")
 				}
 				
 				escreva("\nSALDO ATUAL: "+saldo4)
@@ -370,6 +369,7 @@ programa
 						pare
 						
 					} senao  se (respEmprestimo == "n" ou respEmprestimo == "N"){
+						escreva("\nTenha um ótimo dia.")
 						pare
 					} senao {
 						escreva("ERRO")
@@ -408,7 +408,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 9404; 
+ * @POSICAO-CURSOR = 8090; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
